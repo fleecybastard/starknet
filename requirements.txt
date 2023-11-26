@@ -1,0 +1,7 @@
+starknet-py
+pydantic
+aiohttp
+fake-useragent
+aiohttp_socks
+web3
+Faker

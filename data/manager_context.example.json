@@ -1,0 +1,71 @@
+{
+  "total_transactions": {
+    "min": 23,
+    "max": 26
+  },
+  "sleep_between_accounts": {
+    "min": 20,
+    "max": 200
+  },
+  "notifier": {
+    "broker": "telegram_bot",
+    "credentials": {
+      "bot_token": "",
+      "chat_id": ""
+    }
+  },
+  "exchange": {
+    "name": "okx",
+    "credentials": {
+      "api_key": "",
+      "api_secret": "",
+      "pass_phrase": ""
+    }
+  },
+  "shuffle_accounts": true,
+  "router_context": {
+    "swap_or_lend": {
+      "min": 1,
+      "max": 4
+    },
+    "starkverse": {
+      "min": 0,
+      "max": 2
+    },
+    "dmail": {
+      "min": 1,
+      "max": 4
+    },
+    "starknet_id": {
+      "min": 1,
+      "max": 4
+    },
+    "zklend_collateral": {
+      "min": 1,
+      "max": 3
+    },
+    "total_transactions": {
+      "min": 1,
+      "max": 4
+    },
+    "eth_transaction_amount": {
+      "min": 0.000053,
+      "max": 0.000066
+    },
+    "eth_top_up_amount": {
+      "min": 0.03,
+      "max": 0.05
+    },
+    "sleep_between_transactions": {
+      "min": 15,
+      "max": 31
+    },
+    "swap_or_lend_first": false,
+    "second_top_up": true,
+    "max_gwei": 30,
+    "leave_eth": {
+      "min": 0.00001,
+      "max": 0.00002
+    }
+  }
+}
