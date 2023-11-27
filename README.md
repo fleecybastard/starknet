@@ -84,4 +84,4 @@ Software is suitable for Argent X Cairo 1.0 accounts only.
 
 Available dapps: Dmail, Starknet Id, Zklend, JediSwap, MySwap, SithSwap, 10kSwap, Starkverse
 
-### If you have any questions contact my on telegram <a href="https://t.me/fleecybastard">@fleecybastard</a>
+### If you have any questions contact me on telegram <a href="https://t.me/fleecybastard">@fleecybastard</a>

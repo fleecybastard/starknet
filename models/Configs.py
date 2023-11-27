@@ -23,5 +23,6 @@ class ContractsConfig(BaseModel):
 
     dmail: ContractConfig
     starknetid: ContractConfig
+    starkverse: ContractConfig
 
     zklend: ContractConfig
