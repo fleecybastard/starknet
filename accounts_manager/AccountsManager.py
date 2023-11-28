@@ -61,6 +61,9 @@ class AccountsManager:
             context.total_transactions.min = transactions_left_min
         if transactions_left_max < context.total_transactions.max:
             context.total_transactions.max = transactions_left_max
+        if context.finish_transactions:
+            context.total_transactions.min = transactions_left_min
+            context.total_transactions.max = transactions_left_max
         return context
 
     async def _notify_success(self, account: SuccessfulAccount) -> None:

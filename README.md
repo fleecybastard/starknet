@@ -59,6 +59,8 @@ If you have troubles configuring it on windows, use wsl.
 
 *second_top_up* - boolean value (true/false). If false is set, script won't top up values if it has at least 1 wei. If true is set it will top up account by **top_up_amount** - **eth_balance**
 
+*finish_transactions* - boolean value (true/false). If true is set script will ignore router context **total_transactions** and set it to manager **total_transactions**
+
 *max_gwei* - int value. Script waits for set starknet mainnet gwei.
 
 *leave_eth* - Decimal values for min and max (in ether). Script picks a random amount of eth to leave for account in the range of (min, max). If the balance becomes lower than *leave_eth* value, left transactions will be skipped

@@ -62,6 +62,7 @@
     },
     "swap_or_lend_first": false,
     "second_top_up": true,
+    "finish_transactions": false,
     "max_gwei": 30,
     "leave_eth": {
       "min": 0.00001,

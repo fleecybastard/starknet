@@ -21,6 +21,8 @@ class RouterContext(BaseModel):
 
     second_top_up: bool
 
+    finish_transactions: bool
+
     max_gwei: int
 
     leave_eth: MinMaxDecimalValue
