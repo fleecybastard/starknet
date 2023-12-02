@@ -14,9 +14,12 @@ async def get_current_eth_gwei():
 
 
 async def get_current_starknet_gwei():
-    gateway_client = GatewayClient(net='mainnet')
-    block = await gateway_client.get_block(block_number='pending')
-    return block.gas_price / 10 ** 9
+    try:
+        gateway_client = GatewayClient(net='mainnet')
+        block = await gateway_client.get_block(block_number='pending')
+        return block.gas_price / 10 ** 9
+    except:
+        return float('inf')
 
 
 def ensure_low_gas(max_gwei: int):
