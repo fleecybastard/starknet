@@ -2,7 +2,7 @@ import asyncio
 
 from starknet_py.contract import PreparedFunctionCall
 from starknet_py.net.client_models import TransactionExecutionStatus
-from starknet_py.net.gateway_client import GatewayClient
+from starknet_py.net.full_node_client import FullNodeClient
 from starknet_py.net.account.account import Account
 from starknet_py.net.signer.stark_curve_signer import KeyPair
 from starknet_py.contract import Contract
@@ -24,6 +24,8 @@ from logger import logger
 class Client:
     network = 'mainnet'
 
+    rpc_url = 'https://starknet-mainnet.public.blastapi.io'
+
     send_transaction_attempts = 4
     get_receipt_attempts = 20
 
@@ -34,7 +36,7 @@ class Client:
     def __init__(self, private_key: str, max_gwei: int, proxy: BaseProxy = None):
         self.proxy = proxy
         self.session: ClientSession | None = None
-        self.node_client: GatewayClient | None = None
+        self.node_client: FullNodeClient | None = None
         self.account: Account | None = None
         self.private_key = private_key
         self.key_pair = KeyPair.from_private_key(
@@ -47,8 +49,7 @@ class Client:
 
     async def init(self) -> None:
         self.session = await self.__create_client_session(self.proxy)
-        self.node_client = GatewayClient(net=self.network,
-                                         session=self.session)
+        self.node_client = FullNodeClient(self.rpc_url)
         self.account = self.__create_account()
 
     async def close(self) -> None:
